@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quienes somos?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            transition: flex 0.3s ease;
+        }
+
+        .section:hover,
+        .section.expanded {
+            flex: 8;
+        }
+
+        .section-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .section-content img {
+            max-width: 20%;
+            margin: 0 20px;
+        }
+
+        .section-content p {
+            max-width: 90%;
+            text-align: justify;
+        }
+
+        .section-left {
+            flex-direction: row-reverse;
+        }
+
+        .section-right {
+            flex-direction: row;
+        }
+
+        .section-1 {
+            background-color: #ffffff;
+        }
+
+        .section-2 {
+            background-color: #615f5f;
+        }
+
+        .section-3 {
+            background-color: #ffffff;
+        }
+
+        .section-4 {
+            background-color: #c4c4c4;
+        }
+
+        @media (max-width: 600px) {
+            .section-content {
+                flex-direction: column;
+            }
+
+            .section-content img {
+                max-width: 30%;
+                margin: 4px 0;
+            }
+
+            .section-content p {
+                max-width: 200%;
+                text-align: justify;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".section");
+
+            sections.forEach(section => {
+                // Expande la sección al pasar el cursor (desktop)
+                section.addEventListener("mouseover", () => {
+                    section.classList.add("expanded");
+                });
+
+                // Restaura el tamaño original al quitar el cursor
+                section.addEventListener("mouseout", () => {
+                    section.classList.remove("expanded");
+                });
+
+                // Expande la sección al tocar (móviles)
+                section.addEventListener("touchstart", () => {
+                    section.classList.add("expanded");
+                });
+
+                // Restaura el tamaño original al quitar el toque
+                section.addEventListener("touchend", () => {
+                    section.classList.remove("expanded");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="section section-1 section-left">
+        <div class="section-content">
+            <img src="video/logo.png" alt="Imagen 1">
+            <p>
+                ¿QUIENES SOMOS?<BR>
+                ABASERV es una empresa enfocada ala sadisfacion de nuestros cliente<br>
+                en cuanto a suministro,comercializacion y distribucion de mallas de acero<br>
+                inoxidable,lamina perforada,alambres,tamizadores,filtros entre otros<br>
+                ofreciendo precios competitivos y exelente calidad en relacion a este tipo<br>
+                de materiales para filtrado y cribado de la industria plastica,ceramica<br>
+                pintura,alimenticia, automotriz y entre otras.
+            </p>
+        </div>
+    </div>
+    <div class="section section-2 section-right">
+        <div class="section-content">
+            <img src="video/001.jpg" alt="Imagen 2">
+            <p>
+                NUESTRA MISION:<br>
+                Nuestra misión es cubrir las necesidades de nuestros clientes, ofreciendo<br>
+                productos y servicios de excelente calidad, además de precios accesibles,<br>
+                asegurándonos de que queden satisfechos.<br>
+            </p>
+        </div>
+    </div>
+    <div class="section section-3 section-left">
+        <div class="section-content">
+            <img src="video/vision.jpg" alt="Imagen 3">
+            <p>
+                NUESTRA VISION:<br>
+                Ser la empresa #1 en la eleccion de todos nuestros clientes<br>
+                en base ala disminucion de costos y productos de alta calidad que<br>
+                impacten eficazmente en nuestros clientes 
+            </p>
+        </div>
+    
+</body>
+</html>
+

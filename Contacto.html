@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+        /* Fondo de la página */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('video/617.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilo del recuadro de contacto */
+        .contact {
+            width: 90%; /* Usar el 90% del ancho en dispositivos pequeños */
+            max-width: 400px; /* Limitar el tamaño máximo en pantallas grandes */
+            height: auto;
+            border: 2px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 70px;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .contact h1 {
+            font-size: 20px;
+            margin: 0 0 10px;
+        }
+
+        /* Estilo del texto editable dentro del recuadro */
+        .contact-content {
+            width: 100%;
+            height: 250px;
+            border: 1px dashed #aaa;
+            padding: 10px;
+            overflow-y: auto;
+            resize: none;
+            background-color: #fff;
+            border-radius: 5px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        /* Imagen en la esquina inferior derecha */
+        .contact img {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        /* Redes sociales */
+        .social {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .social li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+         /* Responsividad para dispositivos pequeños */
+         @media (max-width: 768px) {
+            .contact {
+                width: 95%; /* Ocupar casi todo el ancho de la pantalla */
+                height: auto;
+                aspect-ratio: 3 / 1; /* Relación de aspecto más horizontal */
+                padding: 15px;
+            }
+
+            .contact h1 {
+                font-size: 18px;
+            }
+
+            .contact-content {
+                font-size: 12px;
+            }
+
+            .contact img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .social img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact {
+                width: 90%; /* Ocupar todo el ancho de la pantalla */
+                aspect-ratio: 4 / 1; /* Más horizontal en celulares pequeños */
+                padding: 10px;
+            }
+
+            .contact-content {
+                font-size: 12px;
+            }
+
+            .contact img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .social img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div class="contact">
+            <h1>CONTACTO</h1>
+            <div class="contact-content">
+                        <h1>ABASERV</h1>
+            <h2>Ing. Mario Alberto Hidrobo Rodriguez</h2>
+                <h2>RFC ABA2106143V1</h2>
+            <h3>
+                Domicilio: Vallejo #1825"B"
+                CP.78340,San Luis Potosi.S.L.P
+            </h3>
+            <h4>
+                Num: 444-121-6856<br>
+                Email: abaserv@outlook.com
+            </h4>
+        </div>
+            <img src="video/logo.png" alt="Ícono">
+        </div>
+
+        <ul class="social">
+            <h2>Nuestras Redes</h2>
+            <li><a href="https://www.facebook.com/profile.php?id=100054398054806&mibextid=ZbWKwL"><img src="video/face.jpg" alt="Facebook"></a></li>
+            <li><a href="https://www.google.com/maps/place/ABASERV/@22.1327432,-100.9732732,17z/data=!3m1!4b1!4m6!3m5!1s0x842aa20c5b87c91f:0x96298311827ba8cd!8m2!3d22.1327432!4d-100.9732732!16s%2Fg%2F11jsp2n6m1?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"><img src="video/location.png" alt="Ubicacion"></a></li>
+        </ul>
+    </section>
+</body>
+</html>
